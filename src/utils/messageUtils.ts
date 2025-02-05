@@ -28,7 +28,7 @@ export async function sendMessage(
     switch (options.sendAs) {
         case "Reply":
             // response = await interaction.reply({ ...contents, fetchReply: true });
-            // @>=v14.17.0
+            // @<v14.17.0
             await interaction.reply({ ...contents, withResponse: true });
             response = await interaction.fetchReply();
             break;
